@@ -61,6 +61,8 @@ public class SimpleListTest {
 
 	@Test
 	void testFilterLambda(){
+		// with lambda expression we can simply pass the method body to the override statement of the include method
+		// we dont need an anonymous class overriding the include method this way
 		SimpleListImpl result = (SimpleListImpl) testList.filter(o -> ((int)o) % 2 == 0);
 		for(Object o : result){
 			int i = (int)o;
