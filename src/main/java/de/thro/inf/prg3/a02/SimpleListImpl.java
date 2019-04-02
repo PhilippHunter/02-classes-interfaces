@@ -77,3 +77,32 @@ public class SimpleListImpl implements SimpleList, Iterable {
     }
   }
 }
+
+class Program {
+  public static void main(String[] args) {
+    SimpleListImpl myTestList = new SimpleListImpl();
+
+    myTestList.add(1);
+    myTestList.add(100);
+    myTestList.add(new Ob(1,"lel"));
+
+    for(Object obj : myTestList) {
+     System.out.println(obj.toString());
+    }
+  }
+}
+
+class Ob {
+  private int number;
+  private String text;
+
+  public Ob(int Number, String Text) {
+    this.number = Number;
+    this.text = Text;
+  }
+
+  @Override
+  public String toString() {
+    return this.number + " " + this.text;
+  }
+}
