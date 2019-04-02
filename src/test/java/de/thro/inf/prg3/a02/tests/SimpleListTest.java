@@ -43,6 +43,8 @@ public class SimpleListTest {
 
 	@Test
 	void testFilterAnonymousClass(){
+		// 'new SimpleFilter' creates an anonymous class implementing the SimpleFilter interface
+		// therefore we have to override the include method here
 		SimpleListImpl result = (SimpleListImpl) testList.filter(new SimpleFilter() {
 			@Override
 			public boolean include(Object item) {
